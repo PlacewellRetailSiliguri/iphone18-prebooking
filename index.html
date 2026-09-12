@@ -1190,6 +1190,59 @@
     text-decoration:none;
   }
   footer.site a:hover{color:var(--pw-amber);}
+  .foot-stores{
+    margin-top:34px;
+    padding-top:26px;
+    border-top:1px solid #2A2A26;
+  }
+  .foot-stores-title{
+    font-size:12px;
+    color:var(--pw-amber);
+    margin-bottom:16px;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  .store-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  @media(min-width:560px){ .store-grid{grid-template-columns:1fr 1fr;} }
+  @media(min-width:900px){ .store-grid{grid-template-columns:1fr 1fr 1fr;} }
+  .store-card{
+    background:var(--pw-ink-soft);
+    border:1px solid #2A2A26;
+    border-radius:10px;
+    padding:14px 16px;
+  }
+  .store-card strong{
+    display:block;
+    font-size:13.5px;
+    color:var(--pw-white);
+    margin:6px 0 6px;
+  }
+  .store-card p{
+    font-size:12.5px;
+    color:#C9C9C5;
+    line-height:1.6;
+    margin:0;
+  }
+  .store-tag{
+    display:inline-block;
+    font-size:10px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    color:var(--pw-ink);
+    background:var(--pw-amber);
+    padding:2px 8px;
+    border-radius:999px;
+  }
+  .foot-brands{
+    margin-top:18px;
+    font-size:12px;
+    color:#8C8C87;
+  }
   .foot-bottom{
     margin-top:30px;
     padding-top:20px;
@@ -1768,6 +1821,7 @@
     <div>
       <h4>Placewell Retail</h4>
       <p>North Bengal &amp; Sikkim's expert-led technology destination since 1999. Genuine products, honest advice, and service you can walk into.</p>
+      <p><a href="https://www.placewellretail.com/" target="_blank" rel="noopener">www.placewellretail.com</a></p>
     </div>
     <div>
       <h4>Talk to Us</h4>
@@ -1776,11 +1830,52 @@
       <p><a href="mailto:placewellretail@gmail.com">placewellretail@gmail.com</a></p>
     </div>
     <div>
-      <h4>Follow</h4>
-      <p>Instagram / Facebook / YouTube: @placewellretail</p>
-      <p><a href="https://placewellretail.com" target="_blank" rel="noopener">placewellretail.com</a></p>
+      <h4>Follow Us</h4>
+      <p><a href="https://www.facebook.com/placewellretail" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a href="https://www.instagram.com/placewellretail" target="_blank" rel="noopener">Instagram</a></p>
+      <p><a href="https://in.linkedin.com/company/placewell-retail" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p><a href="https://www.youtube.com/@placewellretail" target="_blank" rel="noopener">YouTube</a></p>
+      <p><a href="https://x.com/PlacewellRetail" target="_blank" rel="noopener">X / Twitter</a></p>
     </div>
   </div>
+
+  <div class="wrap foot-stores">
+    <h4 class="foot-stores-title">Our Stores — 6 Locations Across North Bengal &amp; Sikkim</h4>
+    <div class="store-grid">
+      <div class="store-card">
+        <span class="store-tag">Exclusive Store</span>
+        <strong>Lenovo Exclusive Store</strong>
+        <p>Beside Hotel Vinayak Building, Hill Cart Road, Siliguri – 734001</p>
+      </div>
+      <div class="store-card">
+        <span class="store-tag">Exclusive Store</span>
+        <strong>Acer Exclusive Store</strong>
+        <p>Cosmos Mall, Sevoke Road, Siliguri, West Bengal – 734001</p>
+      </div>
+      <div class="store-card">
+        <span class="store-tag">MBO</span>
+        <strong>Hill Cart Road MBO</strong>
+        <p>Beside Hotel Vinayak, Hill Cart Road, Siliguri – 734001</p>
+      </div>
+      <div class="store-card">
+        <span class="store-tag">MBO</span>
+        <strong>City Centre – Ground Floor MBO</strong>
+        <p>Shop No. B0018, City Centre, Uttarayan, Matigara, Siliguri – 734010</p>
+      </div>
+      <div class="store-card">
+        <span class="store-tag">MBO</span>
+        <strong>City Centre – Basement MBO</strong>
+        <p>City Centre, Basement, Uttarayan, Matigara, Siliguri – 734010</p>
+      </div>
+      <div class="store-card">
+        <span class="store-tag">MBO</span>
+        <strong>Gangtok MBO</strong>
+        <p>New Market, MG Marg, Gangtok, Sikkim – 737101</p>
+      </div>
+    </div>
+    <p class="foot-brands">Brand presence: Lenovo (Exclusive Store + MBO) &middot; Acer (Exclusive Store + MBO) &middot; ASUS (MBO) &middot; Dell (MBO)</p>
+  </div>
+
   <div class="wrap foot-bottom">
     <span>&copy; 2026 Placewell Retail. Independent retailer — not affiliated with Apple Inc.</span>
     <span>iPhone is a trademark of Apple Inc.</span>
@@ -1932,6 +2027,12 @@
   }
 
   // ---------- Reliable WhatsApp opener ----------
+  // window.open() is silently blocked by many mobile browsers / in-app
+  // webviews / sandboxed iframes -- it returns null instead of throwing,
+  // so code right after it (like closing a modal) still runs, making it
+  // LOOK like the click worked while WhatsApp never opens. Simulating a
+  // real anchor click is treated as a genuine link navigation instead of
+  // a popup, so it is not blocked the same way.
   function openWhatsApp(url){
     try {
       var a = document.createElement('a');
@@ -1943,6 +2044,7 @@
       a.click();
       document.body.removeChild(a);
     } catch(err){
+      // Absolute last resort fallback
       window.location.href = url;
     }
   }
@@ -2056,4 +2158,3 @@
 </script>
 
 </body>
-</html>
