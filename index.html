@@ -951,6 +951,52 @@
     line-height:1.55;
   }
 
+  .exchange-card{
+    max-width:560px;
+    background:var(--pw-surface);
+    border:1px solid var(--pw-border);
+    border-radius:14px;
+    padding:24px;
+  }
+
+  /* quiz */
+  .quiz-card{
+    max-width:620px;
+    background:var(--pw-white);
+    border:1px solid var(--pw-border);
+    border-radius:14px;
+    padding:24px;
+  }
+  .quiz-q{margin-bottom:20px;}
+  .quiz-result{
+    margin-top:20px;
+    background:var(--pw-ink);
+    color:var(--pw-white);
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+  }
+  .quiz-result-label{
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:#B9B9B4;
+    margin:0;
+  }
+  .quiz-result-model{
+    font-family:var(--font-h);
+    font-weight:900;
+    font-size:24px;
+    color:var(--pw-amber);
+    margin:6px 0;
+  }
+  .quiz-result-why{
+    font-size:13px;
+    color:#D8D8D4;
+    margin:0 0 16px;
+    line-height:1.6;
+  }
+
   /* comparison table */
   .compare-cards{display:none;}
   @media(max-width:719px){
@@ -1595,7 +1641,7 @@
 
       <div class="trust-row">
         <span><b>27+ years</b> in retail</span>
-        <span><b>4 stores</b> &middot; Siliguri &amp; Gangtok</span>
+        <span><b>6 stores</b> &middot; Siliguri &amp; Gangtok</span>
         <span><b>EMI &amp; exchange</b> available</span>
         <span><b>4.4★</b> 2,000+ Google reviews</span>
       </div>
@@ -1919,7 +1965,7 @@
         <p>Serving North Bengal &amp; Sikkim since 1999.</p>
       </div>
       <div class="why-card">
-        <div class="why-num">4</div>
+        <div class="why-num">6</div>
         <h4>Stores near you</h4>
         <p>Siliguri &amp; Gangtok — walk in for pickup and support.</p>
       </div>
@@ -2194,15 +2240,15 @@
   <div class="wrap">
     <div class="section-head">
       <span class="kicker">Visit Us</span>
-      <h2>4 Stores Across Siliguri &amp; Gangtok</h2>
-      <p>Pickup available at these Placewell locations — our Lenovo and Acer exclusive brand stores don't stock Apple products, so they're not listed here.</p>
+      <h2>6 Stores Across Siliguri &amp; Gangtok</h2>
+      <p>iPhone 18 pre-booking pickup is available at our 4 Apple-stocking locations below. Our Lenovo and Acer exclusive brand stores are also open for browsing, service and support — they don't stock Apple products, so they're not iPhone pickup points.</p>
     </div>
     <div class="store-grid">
       <div class="store-card store-card-full">
         <span class="badge">Flagship</span>
         <h4>Hill Cart Road</h4>
         <p>Beside Hotel Vinayak, Hill Cart Road, Siliguri 734001</p>
-        <p class="store-hours">Mon–Sun, 10:30 AM – 8:30 PM*</p>
+        <p class="store-hours">Mon–Sat, 10:00 AM – 8:30 PM (Closed Sundays)</p>
         <div class="store-actions">
           <a class="store-action-link" href="https://www.google.com/maps/search/?api=1&query=Beside+Hotel+Vinayak%2C+Hill+Cart+Road%2C+Siliguri+734001" target="_blank" rel="noopener">📍 Directions</a>
           <a class="store-action-link" href="tel:+919933301333">📞 Call</a>
@@ -2210,10 +2256,20 @@
         </div>
       </div>
       <div class="store-card store-card-full">
+        <span class="badge" style="background:var(--pw-ink);">Exclusive Store</span>
+        <h4>Lenovo Exclusive Store</h4>
+        <p>Beside Hotel Vinayak Building, Hill Cart Road, Siliguri 734001</p>
+        <p class="store-hours">Showroom &amp; service — no Apple/iPhone pickup here</p>
+        <div class="store-actions">
+          <a class="store-action-link" href="https://www.google.com/maps/search/?api=1&query=Beside+Hotel+Vinayak+Building%2C+Hill+Cart+Road%2C+Siliguri+734001" target="_blank" rel="noopener">📍 Directions</a>
+          <a class="store-action-link" href="tel:+919933301333">📞 Call</a>
+        </div>
+      </div>
+      <div class="store-card store-card-full">
         <span class="badge">City Centre</span>
         <h4>Ground Floor, Shop B0018</h4>
         <p>City Centre Mall, Siliguri 734001</p>
-        <p class="store-hours">Mon–Sun, 10:30 AM – 8:30 PM*</p>
+        <p class="store-hours">Mon–Sun, 10:30 AM – 9:00 PM</p>
         <div class="store-actions">
           <a class="store-action-link" href="https://www.google.com/maps/search/?api=1&query=City+Centre+Mall+Ground+Floor+Uttarayan+Matigara+Siliguri+734010" target="_blank" rel="noopener">📍 Directions</a>
           <a class="store-action-link" href="tel:+919933301333">📞 Call</a>
@@ -2224,7 +2280,7 @@
         <span class="badge">City Centre</span>
         <h4>Basement, Shop H0011</h4>
         <p>City Centre Mall, Siliguri 734001</p>
-        <p class="store-hours">Mon–Sun, 10:30 AM – 8:30 PM*</p>
+        <p class="store-hours">Mon–Sun, 10:30 AM – 9:00 PM</p>
         <div class="store-actions">
           <a class="store-action-link" href="https://www.google.com/maps/search/?api=1&query=City+Centre+Mall+Basement+Uttarayan+Matigara+Siliguri+734010" target="_blank" rel="noopener">📍 Directions</a>
           <a class="store-action-link" href="tel:+919933301333">📞 Call</a>
@@ -2232,10 +2288,20 @@
         </div>
       </div>
       <div class="store-card store-card-full">
+        <span class="badge" style="background:var(--pw-ink);">Exclusive Store</span>
+        <h4>Acer Exclusive Store</h4>
+        <p>Cosmos Mall, Sevoke Road, Siliguri, West Bengal 734001</p>
+        <p class="store-hours">Showroom &amp; service — no Apple/iPhone pickup here</p>
+        <div class="store-actions">
+          <a class="store-action-link" href="https://www.google.com/maps/search/?api=1&query=Cosmos+Mall%2C+Sevoke+Road%2C+Siliguri%2C+West+Bengal+734001" target="_blank" rel="noopener">📍 Directions</a>
+          <a class="store-action-link" href="tel:+919933301333">📞 Call</a>
+        </div>
+      </div>
+      <div class="store-card store-card-full">
         <span class="badge">Sikkim</span>
         <h4>Gangtok Store</h4>
         <p>New Market, MG Marg, Gangtok, Sikkim 737101</p>
-        <p class="store-hours">Mon–Sun, 10:30 AM – 8:30 PM*</p>
+        <p class="store-hours">Wed–Mon, 10:30 AM – 8:00 PM (Closed Tuesdays)</p>
         <div class="store-actions">
           <a class="store-action-link" href="https://www.google.com/maps/search/?api=1&query=New+Market%2C+MG+Marg%2C+Gangtok%2C+Sikkim+737101" target="_blank" rel="noopener">📍 Directions</a>
           <a class="store-action-link" href="tel:+919933301333">📞 Call</a>
@@ -2243,7 +2309,7 @@
         </div>
       </div>
     </div>
-    <p class="disclaimer" style="margin-top:16px;">*Store timings shown are indicative — please confirm with the store on WhatsApp or by call, especially around the launch period.</p>
+    <p class="disclaimer" style="margin-top:16px;">Timings may vary on public holidays and around the launch period — please confirm with the store on WhatsApp or by call if visiting specially.</p>
   </div>
 </section>
 
@@ -2806,3 +2872,4 @@
 </script>
 
 </body>
+</html>
